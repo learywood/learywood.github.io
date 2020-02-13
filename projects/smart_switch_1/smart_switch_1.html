@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+	<link rel="stylesheet" href="../../style.css">
+    <title>simon leary-wood</title>
+  </head>
+  <body>
+	<h1>Smart Switch 1</h1>
+	<p>Smart Switch 1 is 6 button wifi switch. It is powered by an ESP8266 NodeMCU and interfaces with our smart home server OpenHab2.</p>
+	<img src="images/IMG_20191226_184253.jpg">
+	<p>I built this switch because we are renting and unable to make any changes to the house's electrical systems.</p>
+	<h2>3D Model</h2>
+	<p>I created a model in Fusion 360. The hardest part was getting the button tolerances right as I wanted them to press fit in the case:</p>
+	<img src="images/fusion1.JPG">
+	<h2>Printing</h2>
+	<p>This was my first time printing with <a href="https://www.amazon.com/HATCHBOX-3D-Filament-Dimensional-Accuracy/dp/B01092XXD4">wood filament</a>, which is the standard PLA plastic mixed with sawdust:</p>
+	<img src="images/IMG_20191225_190226.jpg"></img>
+	<p>The print came out really well, though the tone was a bit lighter than I'd hoped for. One of the advantages of wood filament is that you can process it like wood - it sands REALLY WELL and has a premium soft touch feel. It can also be stained to change the colour, left is sanded and stained, right is raw from the print bed:</p>
+	<img src="images/IMG_20191226_104737.jpg">
+	<p>The stain takes longer to soak in than real wood, so give it a while. I didn't finish the sanding and left some of the layer lines and scratches to give it a more natural appearance.</p>
+	<h2>Electronics</h2>
+	<p>The circuit was pretty simple, I just connected each button to an input pin on the NodeMCU and set the pin mode to use the internal pull up resisitors:</p>
+	<img src="images/IMG_20191226_170604.jpg">
+	<p>The final step was to mount the NodeMCU to the base plate:</p>
+	<img src="images/IMG_20191226_172642.jpg">
+	<h2>Smart Home Hookup</h2>
+	<p>I programmed the buttons to send MQTT messages to the OpenHab2 server. I use Node-RED for the control system, which is a nice visual tool to create graphs and logical conditions. I gave each of the buttons a unique ID and then mapped the IDs to house functions, in this case turning on lights and the tv:</p>
+	<img src="images/nodered1.jpg">
+	<img src="images/nodered2.jpg">
+	<h2>Summary</h2>
+	<ul>
+		<li>+ It works!</li>
+		<li>+ Wood filament looks and feels great.</li>
+		<li>- It is too small and light so can move and tilt when you press the buttons. I added rubber feet and that helped somewhat.</li>
+		<li>- The buttons don't have any caps so they feel a bit cheap. Ideally I'd print caps using flexible filament.</li>
+	</ul>
+	<img src="images/IMG_20191226_162821.jpg">
+	<img src="images/IMG_20191226_162905.jpg">
+  </body>
+</html>

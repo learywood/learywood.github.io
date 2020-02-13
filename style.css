@@ -1,9 +1,10 @@
 body {
   background-color: #222;
+  font-family: Arial;
 }
-h1 {
+h1, h2 {
   color: #0096ff;
 }
-p {
-  color: #000;
+p, li {
+  color: #999;
 }
