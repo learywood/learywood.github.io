@@ -5,7 +5,28 @@
     <title>simon leary-wood</title>
   </head>
   <body>
-	<h1>Smart Switch 2</h1>
-	<p>TODO</p>
+    <h1>Smart Switch 2</h1>
+    <p>Smart switch 2 is a 7 button wifi switch powered by a NodeMCU. It controls the lights and TV in the office. It is an evolution of <a href="../smart_switch_1/smart_switch_1.html">Smart Switch 1</a> that adds an extra button and fixes the instability when pressing the buttons.</p>
+    <img src="images/IMG_20200109_195706.jpg">
+    <p>This time I used smaller rubber capped buttons that have a squishy, soft-touch feel. Instead of press fitting the buttons to the case I soldered them to some perf board:</p>
+    <img src="images/IMG_20200105_180836.jpg">
+    <p>The perf board was then hot glued to the top of the case:</p>
+    <img src="images/IMG_20200109_175200.jpg">
+    <p>Then I connected the NodeMCU, attached it to the base plate. The base had warped slightly and didn't press fit in to the top correctly, so I butchered the bottom with lots of hot glue:</p>
+    <img src="images/IMG_20200109_195716.jpg">
+    <p>This time I decided to leave the case raw after sanding:</p>
+    <img src="images/IMG_20200109_195657.jpg">
+    <p>MQTT messages are hooked up in Node-RED:</p>
+    <img src="images/IMG_20200109_200247.jpg">
+    <h2>Summary</h2>
+    <ul>
+      <li>+ It is stable and doesn't rock or move when buttons are pressed.</li>
+      <li>+ The raw finish looks and feels nice.</li>
+      <li>+ The soft touch buttons are nice and squishy.</li>
+      <li>+ The buttons are the perfect size for my wife's tiny hands.</li>
+      <li>- The buttons are a bit small for my giant sausage fingers.</li>
+      <li>- The base plate warped a bit and didn't fit well.</li>
+      <li>- I wanted 8 buttons but was limited by the number of inputs. I'll need to research multiplexing chips to expand the I/O.</li>
+    </ul>
   </body>
 </html>
